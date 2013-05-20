@@ -1,0 +1,16 @@
+{
+  "name": "Syncopom",
+  "version": "0.0.0-1",
+  "description": "Pomodoros with a syncronized dashboard interface.",
+  "main": "./app.js",
+  "dependencies": {
+    "express": "~3.0.2",
+    "path": "~0.4.9",
+    "startup": "~0.1.12",
+    "jade": "~0.30.0"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.49"
+  }
+}
