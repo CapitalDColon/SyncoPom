@@ -2,7 +2,7 @@ var express = require('express')
   , path = require('path')
 
   , app = express()
-  , app_root = '/';
+  , app_root = './';
 
 app.configure(function() {
   app.use(express.static(path.join(app_root, 'assets')));
@@ -17,4 +17,15 @@ module.exports = app;
 
 app.get('/', function(req, res) {
   res.render('index', {title: 'Home page'});
+});
+
+app.get('/partials/:partial', function(req, res) {
+  console.log(req.params);
+  res.render('partials/' + req.params.partial, function(err, html) {
+    if (err) {
+      res.send(404);
+    } else {
+      res.end(html);
+    }
+  });
 });
