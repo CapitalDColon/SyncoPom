@@ -8,7 +8,8 @@
     function timerService() {
       var endTimestamp
         , resetTimestamp = function (duration) {
-          return endTimestamp = Date.now() + (duration * 10000);
+          return endTimestamp = Date.now() + (duration * 60000);
+          // return endTimestamp = Date.now() + (duration * 10000);
         }
         , endTimestamp = resetTimestamp();
 
