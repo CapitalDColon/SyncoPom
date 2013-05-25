@@ -20,6 +20,9 @@
       $injector.invoke(ResetController, this, {$scope : $scope});
       $scope.status = 'ready';
       $scope.startTimer = function() {
+        if ($scope.minutes) {
+          return $location.path('/active/' + $scope.minutes);
+        }
         $location.path('/active');
       }
     }
