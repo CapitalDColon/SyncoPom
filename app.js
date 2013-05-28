@@ -15,12 +15,7 @@ app.configure(function() {
 
 module.exports = app;
 
-app.get('/', function(req, res) {
-  res.render('index', {title: 'Home page'});
-});
-
 app.get('/partials/:partial', function(req, res) {
-  console.log(req.params);
   res.render('partials/' + req.params.partial, function(err, html) {
     if (err) {
       res.send(404);
@@ -28,4 +23,9 @@ app.get('/partials/:partial', function(req, res) {
       res.end(html);
     }
   });
+});
+
+// Everything else goes to Angular
+app.get('*', function(req, res) {
+  res.render('index', {title: 'Home page'});
 });

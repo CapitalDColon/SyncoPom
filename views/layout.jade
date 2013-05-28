@@ -5,16 +5,18 @@ html
     title SyncoPom - #{title}
     link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/styles/syncopom.css')
   body
     div(data-ng-app='pom')
       header
-        h1 SyncoPom
-        h2 Synchronized Pomodoros (Free)
+        h1
+          img(src='/img/SyncoLogo.png')
       section.content(data-ng-view)
 
     block scripts
     //- script(src='/vendor/bootstrap/js/bootstrap.min.js')
-    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
+    //- script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
+    script(src='/vendor/angular/js/angular-1.0.3.js')
     script(src='/js/services.js')
     script(src='/js/controllers.js')
     script(src='/js/directives.js')
