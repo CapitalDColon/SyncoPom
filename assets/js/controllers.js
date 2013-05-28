@@ -2,22 +2,14 @@
 
   'use strict';
 
-  var app = angular.module('pom.controllers', [])
-    , myInterval;
-
-  var ResetController = function ResetCtrl($injector, $scope, timerService) {
-    window.clearInterval(myInterval);
-    timerService.clearTimestamp();
-  }
+  var app = angular.module('pom.controllers', []);
 
   app.controller('ReadyController', [
-    '$injector',
     '$scope',
     '$location',
     'timerService',
 
-    function ReadyCtrl($injector, $scope, $location, timerService) {
-      $injector.invoke(ResetController, this, {$scope : $scope});
+    function ReadyCtrl($scope, $location, timerService) {
       $scope.status = 'ready';
       $scope.startTimer = function() {
         if ($scope.minutes) {
@@ -29,16 +21,13 @@
   ]);
 
   app.controller('ActiveController', [
-    '$injector',
     '$scope',
     '$location',
     '$routeParams',
     'timerService',
 
-    function ActiveCtrl($injector, $scope, $location, $routeParams, timerService) {
-      var endTimestamp, minutes;
-      console.log($routeParams);
-      $injector.invoke(ResetController, this, {$scope : $scope});
+    function ActiveCtrl($scope, $location, $routeParams, timerService) {
+      var myInterval, endTimestamp, minutes;
       if ($routeParams.minutes) {
         minutes = $routeParams.minutes;
       }
@@ -65,6 +54,11 @@
       }
       myInterval = window.setInterval(setRemaining, 1000);
 
+      $scope.$on('$destroy', function() {
+        window.clearInterval(myInterval);
+        timerService.clearTimestamp();
+      });
+
       $scope.interruptions = [];
 
       $scope.prepInterruptions = function() {
@@ -84,13 +78,10 @@
   ]);
 
   app.controller('DoneController', [
-    '$injector',
     '$scope',
     '$location',
 
-    function DoneCtrl($injector, $scope, $location) {
-      $injector.invoke(ResetController, this, {$scope : $scope});
-      window.clearInterval(myInterval);
+    function DoneCtrl($scope, $location) {
       $scope.status = 'done';
     }
   ]);
