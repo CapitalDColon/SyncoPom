@@ -9,7 +9,12 @@
 }
 .readyPage .btn.start {
   font-size: 55px;
+  left: 50%;
+  margin-left: -191px;
+  margin-top: -61px;
   padding: 50px;
+  position: fixed;
+  top: 50%;
 }
 blockquote {}
 blockquote .quote {}
