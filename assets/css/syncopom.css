@@ -1,5 +1,16 @@
-
-
+.readyPage .content {
+  text-align: center;
+}
+.readyPage .logo {
+  margin: 25px 0 100px;
+}
+.readyPage .logo img {
+  height: 100px;
+}
+.readyPage .btn.start {
+  padding: 50px;
+  font-size: 55px;
+}
 blockquote {}
 blockquote .quote {}
 blockquote .attribution {}

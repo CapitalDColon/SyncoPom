@@ -2,16 +2,13 @@
 html
   head
     meta(name='viewport', content='width=device-width')
-    title SyncoPom - #{title}
+    title SyncoPom
     //- link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap.min.css')
     //- link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.min.css')
     //- link(rel='stylesheet', href='/styles/syncopom.css')
     link(rel='stylesheet', href='/build.css')
   body
     div(data-ng-app='SyncoPom')
-      header
-        h1
-          img(src='/img/SyncoLogo.png')
       section.content(data-ng-view)
 
     block scripts
