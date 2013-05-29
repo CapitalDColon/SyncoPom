@@ -6,6 +6,7 @@ var express = require('express')
 
 app.configure(function() {
   app.use(express.static(path.join(app_root, 'assets')));
+  app.use(express.static(path.join(app_root, 'build')));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.set('views', __dirname + '/views');

@@ -1,0 +1,14 @@
+{
+  "name": "angular",
+  "version": "1.0.3",
+  "description": "Component version of Angular.js",
+  "homepage": "http://angularjs.org/",
+  "keywords": [
+    "angular"
+  ],
+  "dependencies": {},
+  "scripts": [
+    "index.js"
+  ],
+  "repo": "https://raw.github.com/CamShaft/component-angular"
+}

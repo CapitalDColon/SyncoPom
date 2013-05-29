@@ -1,0 +1,27 @@
+{
+  "name": "SyncoPom",
+  "repo": "SyncoPom/SyncoPom",
+  "description": "Pomodoros with a syncronized dashboard interface.",
+  "version": "0.0.1",
+  "dependencies": {
+    "CamShaft/bootstrap-buttons": "*",
+    "CamShaft/component-angular": "*"
+  },
+  "main": "assets/js/config.js",
+  "scripts": [
+    "assets/js/config.js",
+    "assets/js/index.js",
+    "assets/js/controllers/active.js",
+    "assets/js/controllers/done.js",
+    "assets/js/controllers/ready.js",
+    "assets/js/directives/timer.js",
+    "assets/js/services/timerSvc.js"
+  ],
+  "styles": [
+    "assets/css/syncopom.css"
+  ],
+  "images": [
+    "assets/img/SyncoLogo.png"
+  ],
+  "license": "MIT"
+}
