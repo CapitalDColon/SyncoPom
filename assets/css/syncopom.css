@@ -1,31 +1,28 @@
 body {
   font-family: 'sportropregular';
 }
-.readyPage .content {
+.content {
   text-align: center;
 }
-  .readyPage .logo {
+  .content .logo {
     margin: 50px 0 100px;
   }
-    .readyPage .logo img {
+    .content .logo img {
       width: 500px;
     }
-  .readyPage .btn.start {
+  .content .btn.start {
     display: block;
     font-size: 55px;
     margin: 0 auto;
     padding: 50px;
   }
-.activePage .content {
-  text-align: center;
-}
-  .activePage blockquote {
+  .content blockquote {
     font-size: 38px;
     max-width: 50%;
     margin: 76px auto 100px;
   }
-    .activePage .quote {}
-    .activePage .attribution {
+    .content .quote {}
+    .content .attribution {
       font-size: 55%;
       font-style: italic;
     }
