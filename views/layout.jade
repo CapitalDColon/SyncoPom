@@ -7,9 +7,13 @@ html
     //- link(rel='stylesheet', href='/vendor/bootstrap/css/bootstrap-responsive.min.css')
     //- link(rel='stylesheet', href='/styles/syncopom.css')
     link(rel='stylesheet', href='/build.css')
+    base(href='/')
   body
     div(data-ng-app='SyncoPom')
-      section.content(data-ng-view)
+      .contentWrapper(data-ng-view, data-ng-animate="{enter: 'bring-forward', leave: 'slide-up'}")
+      .footer
+        .logo
+          img(src='/img/SyncoLogo.png')
 
     block scripts
     //- script(src='/vendor/bootstrap/js/bootstrap.min.js')

@@ -13,7 +13,6 @@ app.config([
   '$routeProvider',
   '$locationProvider',
   function($routeProvider, $locationProvider) {
-    console.log('routing');
     $routeProvider
       .when('/', {
         templateUrl: '/partials/ready',
@@ -32,7 +31,8 @@ app.config([
         controller: done
       })
       .otherwise({
-        redirectTo: '/'
+        templateUrl: '/partials/active',
+        controller: active
       });
 
     $locationProvider.html5Mode(true);

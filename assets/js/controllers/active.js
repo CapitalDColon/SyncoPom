@@ -2,8 +2,10 @@
 var app = require('../');
 require('../directives/timer.js')
 
-function ActiveCtrl($scope, $location, $routeParams, timerService) {
-  console.log('active');
+function ActiveCtrl($scope, $location, $routeParams, timerService, $route) {
+  console.log($location.$$path);
+  console.log('here');
+  console.log($routeParams);
   $scope.status = 'active';
   var myInterval, endTimestamp, minutes;
   if ($routeParams.minutes) {
@@ -58,6 +60,7 @@ app.controller('ActiveCtrl', [
   '$location',
   '$routeParams',
   require('../services/timerSvc'),
+  '$route',
 
   ActiveCtrl
 ]);

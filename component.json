@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "dependencies": {
     "CamShaft/bootstrap-buttons": "*",
-    "CamShaft/component-angular": "*"
+    "SyncoPom/component-angular": "*"
   },
   "main": "assets/js/config.js",
   "scripts": [
@@ -15,10 +15,13 @@
     "assets/js/controllers/done.js",
     "assets/js/controllers/ready.js",
     "assets/js/directives/timer.js",
+    "assets/js/filters/pad.js",
     "assets/js/services/timerSvc.js"
   ],
   "styles": [
-    "assets/css/syncopom.css"
+    "assets/css/syncopom.css",
+    "assets/css/animation.css",
+    "assets/fonts/sportrop.css"
   ],
   "images": [
     "assets/img/SyncoLogo.png"

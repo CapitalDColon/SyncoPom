@@ -1,8 +1,9 @@
 //- .input-append
   //- input(type='text', data-ng-model='minutes', placeholder="Custom Minutes (25)")
   //- input(type='submit', value='Ready', data-ng-click='startTimer()').btn.btn-success
-.readyPage
-  .content
-    .logo
-      img(src='/img/SyncoLogo.png')
-    button(data-ng-click='startTimer()').btn.btn-success.btn-large.start start timer
+.page.readyPage
+  .pageWrapper
+    .content
+      .logo
+        img(src='/img/SyncoLogo.png')
+      button(data-ng-click='startTimer()').btn.btn-success.btn-large.start start timer
