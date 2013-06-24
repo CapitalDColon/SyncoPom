@@ -10,6 +10,8 @@ body > div,
 }
 html, body {
   font-family: 'sportropregular';
+  padding: 0;
+  margin: 0;
 }
 .content {
   text-align: center;
