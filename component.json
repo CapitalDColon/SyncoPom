@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "dependencies": {
     "CamShaft/bootstrap-buttons": "*",
-    "SyncoPom/component-angular": "*"
+    "dncrews/component-angular": "1.1.x"
   },
   "main": "assets/js/config.js",
   "scripts": [
