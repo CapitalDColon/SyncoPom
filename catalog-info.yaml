@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dan-test
+  description: Backstage Platform
+
+spec:
+  type: website
+  owner: developer-experience-squad
+  lifecycle: development
+  system: backstage
